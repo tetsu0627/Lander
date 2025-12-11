@@ -1,0 +1,73 @@
+body {
+    background: #000000;
+    color: gold;
+    font-family: 'Arial';
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#topBar {
+    background: #1a1a1a;
+    padding: 12px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#mapArea {
+    position: relative;
+    height: 300px;
+    border: 2px solid gold;
+    margin: 10px;
+}
+
+.city {
+    position: absolute;
+    font-size: 22px;
+}
+
+#cityA { left: 20px; top: 200px; }
+#cityB { right: 20px; top: 80px; }
+
+#caravan {
+    position: absolute;
+    left: 20px;
+    top: 150px;
+    font-size: 30px;
+}
+
+#actionButtons button {
+    width: 90%;
+    padding: 12px;
+    margin: 8px auto;
+    background: #333;
+    color: gold;
+    border: 1px solid gold;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+#logBox {
+    background: #111;
+    color: gold;
+    height: 120px;
+    overflow-y: scroll;
+    padding: 10px;
+    border-top: 2px solid gold;
+}
+
+.popup {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #111;
+    border: 2px solid gold;
+    padding: 20px;
+    width: 80%;
+}
+
+.hidden {
+    display: none;
+}
