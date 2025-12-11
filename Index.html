@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>商隊護衛戰鬥 V0.1</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div id="topBar">
+        <div>🏙 城市：<span id="currentCity">A 城</span></div>
+        <div>💰 金錢：<span id="money">100</span></div>
+        <div>🧍‍♂️ 護衛：<span id="guards">1</span></div>
+    </div>
+
+    <div id="mapArea">
+        <div id="caravan">🚚</div>
+        <div class="city" id="cityA">A 城</div>
+        <div class="city" id="cityB">B 城</div>
+    </div>
+
+    <div id="actionButtons">
+        <button onclick="openTrade()">交易</button>
+        <button onclick="openWarehouse()">倉庫</button>
+        <button onclick="hireGuard()">雇用護衛</button>
+        <button onclick="travelToB()">前往 B 城</button>
+    </div>
+
+    <div id="logBox"></div>
+
+    <!-- 交易視窗 -->
+    <div id="tradeWindow" class="popup hidden">
+        <h2>交易市場</h2>
+        <p>木材：<span id="woodPrice"></span></p>
+        <button onclick="buy('wood')">買木材</button>
+        <button onclick="sell('wood')">賣木材</button>
+        <br><br>
+        <p>食物：<span id="foodPrice"></span></p>
+        <button onclick="buy('food')">買食物</button>
+        <button onclick="sell('food')">賣食物</button>
+        <br><br>
+        <button onclick="closeTrade()">關閉</button>
+    </div>
+
+    <!-- 倉庫視窗 -->
+    <div id="warehouseWindow" class="popup hidden">
+        <h2>倉庫</h2>
+        <div id="warehouseList"></div>
+        <button onclick="closeWarehouse()">關閉</button>
+    </div>
+
+    <!-- 戰鬥視窗 -->
+    <div id="battleWindow" class="popup hidden">
+        <h2>⚔️ 遭遇山賊！</h2>
+        <p id="battleInfo">戰鬥開始</p>
+        <button onclick="battleAttack()">Attack</button>
+        <button onclick="battleAuto()">Auto</button>
+        <button onclick="battleFlee()">Flee</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
